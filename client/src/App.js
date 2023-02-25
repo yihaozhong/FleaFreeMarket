@@ -7,12 +7,6 @@ const Button = styled.button`
   font-size: 1rem;
 `
 
-const Button = styled.button`
-  background: red;
-  color: white;
-  font-size: 1rem;
-`
-
 function App() {
   return (
     <div>
