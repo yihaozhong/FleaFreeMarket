@@ -1,16 +1,23 @@
-import Landing from "./pages/Landing";
+import Landing from './pages/Landing'
 import styled from 'styled-components'
 
 const Button = styled.button`
-
-ba
+  background: red;
+  color: white;
+  font-size: 1rem;
 `
 
+const Button = styled.button`
+  background: red;
+  color: white;
+  font-size: 1rem;
+`
 
 function App() {
   return (
     <div>
-      <h1>FleaFree</h1>;
+      <Button>Click ME</Button>
+      <h1>FleaFree</h1>
       <Landing />
     </div>
   )
