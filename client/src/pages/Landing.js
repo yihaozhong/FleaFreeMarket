@@ -4,7 +4,7 @@ import main from "../assets/images/main.svg"
 // import styled from 'styled-components'
 import Wrapper from '../assets/wrappers/LandingPage'
 import {Logo} from "../components"
-
+import { Link } from 'react-router-dom';
 
 const Landing = () =>  {
   return (
@@ -26,7 +26,10 @@ const Landing = () =>  {
                  ommodo interdum sit amet quis erat. Nam pretium risus quis molestie congue. Sed quis sem cursus justo ornare sollicitudin et ut ante. Nulla sollicitudin 
                  ipsum non purus tincidunt accumsan.
                 </p>
-                <button className='btn btn-hero'>Login/Register</button>
+                <Link to='/register' className='btn btn-hero'>
+                    Login / Register
+                </Link>
+                
             </div>
             <img src = {main} alt = 'flea market' className='img main-img'/>
         </div>

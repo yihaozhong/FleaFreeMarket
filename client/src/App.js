@@ -1,19 +1,22 @@
 import Landing from './pages/Landing'
-import styled from 'styled-components'
-
-const Button = styled.button`
-  background: red;
-  color: white;
-  font-size: 1rem;
-`
+// import styled from 'styled-components'
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <Button>Click ME</Button>
-      <h1>FleaFree</h1>
-      <Landing />
-    </div>
+    <BrowserRouter>
+    <nav>
+      <Link to='/'>Dashboard</Link>
+      <Link to='/register'>Register</Link>
+      <Link to='/landing'>Home</Link>
+    </nav>
+      <Routes>
+        <Route path ="/" element = {<div>Dashboard</div>}/>
+        <Route path ="/register" element = {<div>Register</div>}/>
+        <Route path ="/landing" element = {<Landing />}/>
+        <Route path="/" element={<h1>Error</h1>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
