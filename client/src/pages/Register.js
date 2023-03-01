@@ -20,7 +20,8 @@ const Register = () => {
   const [values, setValues] = useState(initialState);
 
   // FOR toggle member 
-
+  const state = useAppContext()
+  
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
