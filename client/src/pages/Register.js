@@ -10,8 +10,7 @@ const initialState = {
   name: '',
   email: '',
   password: '',
-  isMember: true,
-  showAlert:  false,
+  isMember: true
 };
 // if possible prefer local state
 // global state
@@ -20,7 +19,8 @@ const Register = () => {
   const [values, setValues] = useState(initialState);
 
   // FOR toggle member 
-  const state = useAppContext()
+  const { isLoading, showAlert } = useAppContext();
+
   
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -42,7 +42,7 @@ const Register = () => {
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>{values.isMember ? 'Login': 'Register'}</h3>
-        {values.showAlert && <Alert/>}
+        {showAlert && <Alert/>}
         {/* name input */}
         {!values.isMember && (
 
